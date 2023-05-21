@@ -6,7 +6,7 @@
 
     <groupId>com.slimtrade</groupId>
     <artifactId>slim-trade</artifactId>
-    <version>0.3.5</version>
+    <version>0.3.6</version>
     <packaging>jar</packaging>
 
     <properties>
@@ -111,7 +111,7 @@
                     <version>3.0.0</version>
                 </plugin>
                 <!-- Used to run jar from command line -->
-                <plugin>
+                <!-- <plugin>
                     <groupId>org.codehaus.mojo</groupId>
                     <artifactId>exec-maven-plugin</artifactId>
                     <version>1.2.1</version>
@@ -125,12 +125,12 @@
                     <configuration>
                         <mainClass>com.slimtrade.App</mainClass>
                     </configuration>
-                </plugin>
+                </plugin> -->
                 <!-- Used to build jar -->
-                <plugin>
+                <!-- <plugin>
                     <artifactId>maven-assembly-plugin</artifactId>
                     <configuration>
-                        <outputDirectory>D:\Programming\Java\_EXPORTED JARS</outputDirectory>
+                        <outputDirectory>D:\</outputDirectory>
                         <finalName>SlimTrade</finalName>
                         <appendAssemblyId>false</appendAssemblyId>
                         <archive>
@@ -142,9 +142,40 @@
                             <descriptorRef>jar-with-dependencies</descriptorRef>
                         </descriptorRefs>
                     </configuration>
-                </plugin>
+                </plugin> -->
             </plugins>
         </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>3.2.0</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>com.slimtrade.App</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.2.0</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <finalName>SlimTrade</finalName>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
     </build>
 
 </project>
