@@ -39,6 +39,9 @@ public enum LangRegex {
             "안녕하세요, ((?<priceQuantity>\\d+((\\.|,)\\d+)?) (?<priceType>.+))\\(으\\)로 올려놓은 (?<league>.+) 리그의 (?<itemName>.+)\\(을\\)를 구매하고 싶습니다 \\(보관함 탭 \\\\?\"(?<stashtabName>.+)\", 위치: 왼쪽 (?<stashtabX>\\d+), 상단 (?<stashtabY>\\d+)\\))",
             "안녕하세요, (?<league>.+) 리그의 (?<itemQuantity>\\d+) (?<itemName>.+)\\(을\\)를 (?<priceQuantity>\\d+(\\.\\d+)?) (?<priceType>.+) 오브\\(으\\)로 구매하고 싶습니다)",
     }),
+    JAPANESE("を購入したいです", null, new String[]{
+            "こんにちは、(?<league>.+) リーグで (?<priceQuantity>\\d+(\\.\\d+)?) (?<priceType>.+) で売っている、あなたの (?<itemName>.+) を購入したいです \\(スタッシュタブ \\\\?\"(?<stashtabName>.+)\"; 位置: 左から (?<stashtabX>\\d+), 上から (?<stashtabY>\\d+)\\))",
+   }),
     PORTUGUESE("eu gostaria de comprar", "entrou na área\\.", new String[]{
             "Olá, eu gostaria de comprar o seu item (?<itemName>.+) listado por ((?<priceQuantity>\\d+((\\.|,)\\d+)?) (?<priceType>.+)) na (?<league>.+) \\(aba do baú: \\\\?\"(?<stashtabName>.+)\"; posição: esquerda (?<stashX>\\d+), topo (?<stashY>\\d+)\\)\\.?(?<bonusText>.+)?)",
             "Olá, eu gostaria de comprar seu(s) ((?<itemQuantity>\\d+((\\.|,)\\d+)?) (?<itemName>.+)) pelo(s) meu(s) ((?<priceQuantity>\\d+((\\.|,)\\d+)?) (?<priceType>.+)) na (?<league>.+)\\.?(?<bonusText>.+)?)",
