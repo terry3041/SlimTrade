@@ -8,7 +8,7 @@ public class References {
 
     // App Data
     public static final String APP_NAME = "SlimTrade";
-    public static final String AUTHOR_NAME = "zmilla93";
+    public static final String AUTHOR_NAME = "terry3041";
     private static String APP_VERSION = null;
 
     // Internal
