@@ -63,12 +63,13 @@ public enum LangRegex {
             "Hola, quisiera comprar tu (?<itemName>.+) listado por ((?<priceQuantity>\\d+((\\.|,)\\d+)?) (?<priceType>.+)) en (?<league>.+)\\.?(?<bonusText>.+)?)",
             "Hola, quisiera comprar tu (?<itemName>.+) en (?<league>.+)\\.?(?<bonusText>.+)?)",
     }),
-    THAI("เราต้องการจะชื้อของคุณ", "เข้าสู่พื้นที่\\.", new String[]{
+    THAI("สวัสดี", "เข้าสู่พื้นที่\\.", new String[]{
             "สวัสดี, เราต้องการจะชื้อของคุณ (?<itemName>.+) ใน ราคา ((?<priceQuantity>\\d+((\\.|,)\\d+)?) (?<priceType>.+)) ใน (?<league>.+) \\(stash tab \\\\?\"(?<stashtabName>.+)\"; ตำแหน่ง: ซ้าย (?<stashX>\\d+), บน (?<stashY>\\d+)\\)\\.?(?<bonusText>.+)?)",
             "สวัสดี, เราต้องการจะชื้อของคุณ (?<itemName>.+) ใน (?<league>.+) \\(stash tab \\\\?\"(?<stashtabName>.+)\"; ตำแหน่ง: ซ้าย (?<stashX>\\d+), บน (?<stashY>\\d+)\\)\\.?(?<bonusText>.+)?)",
             "สวัสดี เรามีความต้องการจะชื้อ  ((?<itemQuantity>\\d+((\\.|,)\\d+)?) (?<itemName>.+)) ของคุณ ฉันมี ((?<priceQuantity>\\d+((\\.|,)\\d+)?) (?<priceType>.+)) ใน (?<league>.+)\\.?(?<bonusText>.+)?)",
             "สวัสดี, เราต้องการจะชื้อของคุณ (?<itemName>.+) ใน ราคา ((?<priceQuantity>\\d+((\\.|,)\\d+)?) (?<priceType>.+)) ใน (?<league>.+)\\.?(?<bonusText>.+)?)",
             "สวัสดี, เราต้องการจะชื้อของคุณ (?<itemName>.+) ใน (?<league>.+)\\.?(?<bonusText>.+)?)",
+            "สวัสดี เราต้องการซื้อ (?<itemName>.+) ที่คุณตั้งขายไว้ในราคา ((?<priceQuantity>\\d+((\\.|,)\\d+)?) (?<priceType>.+)) ในลีก (?<league>.+) \\(แท็บ \\\\?\"(?<stashtabName>.+)\" ตำแหน่ง: ซ้าย (?<stashX>\\d+), บน (?<stashY>\\d+)\\)\\.?(?<bonusText>.+)?)",
     }),
     ;
 
